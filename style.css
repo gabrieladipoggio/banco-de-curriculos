@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+:root {
+    --main: #33627C;
+    --text: #525252;
+}
+
+
+header {
+    background: var(--main);
+    box-shadow: 8px 8px 15px 8px rgba(119, 119, 119, 0.25);
+    height: 130px;
+    width: 100%;
+    color: #fff;
+    font-size: 26px;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 150px;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+.container {
+    height: 100%;
+    display: flex;
+    margin: 7rem auto;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text, form{
+    display: flex;
+    flex-direction: column;
+    width: 670px;
+    justify-content:center;
+}
+
+.title {
+    color: var(--main);
+    font-size: 42px;
+   
+}
+
+ .title-decoration{
+    width: 70px;
+    height: 7px;
+    background-color: var(--text);
+    margin: 15px 0 1em 0;
+} 
+
+.intro-texto {
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.formulario h3 {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 500;
+    color: var(--main);
+}
+
+form {
+    margin: 4rem auto;
+    font-size: 22px;
+    color: #171717;
+    width: 65%;
+}
+
+input, select, textarea, option{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid;   
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+}
+
+fieldset {
+    border:none;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.bairro {
+    width: 400px;;
+}
+
+form h2 {
+    color: var(--main);
+    font-weight: 500;
+    margin:20px;
+}
+
+.carro {
+    flex-direction: row;
+    width: 200px;
+}
+
+.carro label, .habilitacao label {
+    font-weight: 400;
+    padding-right: 20px;
+}
+
+.habilitacao {
+    height: 80px;
+    margin-right: 100px
+}
+
+.habilitacao input {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--main);
+    border: none;
+    width: 400px;
+    height: 50px;
+    color: white;
+    font-weight: 400;
+    border-radius: 8px;
+    font-size: 20px;
+    margin: 1.5rem auto;
+    cursor: pointer;
+}
+
+span {
+    font-size: 20px;
+    
+    color: red;
+}
