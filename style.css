@@ -120,8 +120,12 @@ fieldset {
     margin: 0 20px;
 }
 
-.bairro {
-    width: 400px;;
+.cep {
+    width: 300px;;
+}
+
+.estado{
+    width: 100px;
 }
 
 form h2 {
@@ -165,4 +169,5 @@ button {
 span {
     font-size: 18px;
     color: red;
+    display: inline-block;
 }

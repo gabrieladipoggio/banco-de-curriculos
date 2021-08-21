@@ -24,7 +24,7 @@
     </header>
     <main>
         <section class="container">
-            <div class="main-img"><img src="./work2.jpg"></div>
+            <div class="main-img"><img src="./img/work2.jpg"></div>
 
             <article class="main-text">
                 <div class="title">
@@ -43,7 +43,7 @@
 
         <section class="formulario">
             <h3>Cadastre o seu currículo no formulário abaixo:</h3>
-            <form>
+            <form method="get" action=".">>
                 <div class="form-row">
                     <fieldset>
                         <label for="name">Nome Completo:<span>*</span>
@@ -52,9 +52,9 @@
                     </fieldset>
 
                     <fieldset>
-                        <label for="cargo">
-                        </label> Cargo Pretendido:
-                        <input type="text" for="cargo" id="cargo">
+                        <label for="cargo">Cargo Pretendido:<span>*</span>
+                        </label>
+                        <input type="text" for="cargo" id="cargo" required>
                     </fieldset>
                 </div>
 
@@ -87,34 +87,50 @@
                 </div>
 
                 <div class="form-row">
-                    <fieldset>
-                        <label for="endereco"> Endereço:<span>*</span>
+
+                    <fieldset class="cep">
+                        <label for="cep"> CEP:<span>*</span>
                         </label>
-                        <input type="address" for="endereco" id="endereco" required>
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                            onblur="pesquisacep(this.value);">
+                    </fieldset>
+                    <fieldset>
+
+                        <label for="rua"> Endereço:<span>*</span>
+                        </label>
+                        <input type="address" for="rua" id="rua" required>
                     </fieldset>
 
-                    <fieldset class="bairro">
+                </div>
+
+                <div class="form-row">
+                    <fieldset>
                         <label for="bairro"> Bairro:<span>*</span>
                         </label>
                         <input type="address" for="bairro" id="bairro" required>
                     </fieldset>
-                </div>
 
-                <div class="form-row">
                     <fieldset>
                         <label for="cidade"> Cidade:<span>*</span>
                         </label>
                         <input type="address" for="cidade" id="cidade" required>
                     </fieldset>
 
-                    <fieldset>
-                        <label for="cep"> CEP:
+                    <fieldset class="estado">
+                        <label for="uf" >Estado:<span>*</span>
                         </label>
-                        <input type="number" for="cep" id="cep">
+                        <input type="address" for="uf" id="uf" required>
                     </fieldset>
+
                 </div>
 
                 <div class="form-row">
+                    <fieldset>
+                        <label for="celular"> Celular:<span>*</span>
+                        </label>
+                        <input type="phone" for="celular" id="celular" required>
+                    </fieldset>
+
                     <fieldset>
                         <label for="tel-1"> Telefone Fixo 1:
                         </label>
@@ -125,12 +141,6 @@
                         <label for="tel-2"> Telefone Fixo 2:
                         </label>
                         <input type="phone" for="tel-2" id="tel-2">
-                    </fieldset>
-
-                    <fieldset>
-                        <label for="celular"> Celular:
-                        </label>
-                        <input type="phone" for="celular" id="celular">
                     </fieldset>
                 </div>
 
@@ -145,7 +155,7 @@
                     <fieldset>
                         <label for="email"> Email:<span>*</span>
                         </label>
-                        <input type="email" for="email" id="email">
+                        <input type="email" for="email" id="email" required>
                     </fieldset>
 
                 </div>
@@ -155,9 +165,9 @@
 
                 <div class="form-row">
                     <fieldset>
-                        <label for="id"> Identidade:<span>*</span>
+                        <label for="id"> Identidade:
                         </label>
-                        <input type="number" for="id" id="id" required>
+                        <input type="number" for="id" id="id">
                     </fieldset>
 
                     <fieldset>
@@ -169,7 +179,7 @@
 
                 <div class="form-row">
                     <fieldset>
-                         <p>Habilitação:</p>
+                        <p>Habilitação:</p>
                         </label>
                         <div class="habilitacao">
                             <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
@@ -189,7 +199,7 @@
 
                             <input type="checkbox" id="nao_habilitado" name="nao_habilitado">
                             <label for="nao_habilitado">Categoria E</label>
-                            
+
                         </div>
                     </fieldset>
 
@@ -205,10 +215,9 @@
                 </div>
                 <button type="submit">Enviar</button>
             </form>
-
         </section>
-
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
