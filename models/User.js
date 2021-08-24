@@ -50,7 +50,8 @@ const User = db.sequelize.define('cadastros',{
         type: db.Sequelize.STRING
     },
     cpf: {
-        type: db.Sequelize.STRING
+        type: db.Sequelize.STRING,
+        unique: true
     },
     habilitacao: {
         type: db.Sequelize.STRING
