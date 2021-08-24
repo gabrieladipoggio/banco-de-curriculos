@@ -71,7 +71,9 @@
                         <select>
                             <option value="solteiro">Solteiro(a)</option>
                             <option value="casado">Casado(a)</option>
+                            <option value="separado">Separado(a)</option>
                             <option value="divorciado">Divorciado(a)</option>
+                            <option value="viuvo">Viúvo(a)</option>
                         </select>
                     </fieldset>
 
@@ -79,11 +81,15 @@
                         <label for="name"> Sexo:
                         </label>
                         <select>
-                            <option value="masc">Masculino</option>
+                            <option label="" disabled selected value>Escolha uma opção:</option>
                             <option value="fem">Feminino</option>
+                            <option value="masc">Masculino</option>
                             <option value="outro">Outro</option>
+                            <option value="nao-informado">Prefiro não informar</option>
                         </select>
                     </fieldset>
+
+
                 </div>
 
                 <div class="form-row">
@@ -94,11 +100,17 @@
                         <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
                             onblur="pesquisacep(this.value);">
                     </fieldset>
-                    <fieldset>
 
+                    <fieldset class="rua">
                         <label for="rua"> Endereço:<span>*</span>
                         </label>
                         <input type="address" for="rua" id="rua" required>
+                    </fieldset>
+
+                    <fieldset class="numero">
+                        <label for="numero">Número<span>*</span>
+                        </label>
+                        <input type="number" for="numero" id="numero" required>
                     </fieldset>
 
                 </div>
