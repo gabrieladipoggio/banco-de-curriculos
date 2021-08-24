@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
@@ -54,7 +55,7 @@
                     <fieldset>
                         <label for="cargo">Cargo Pretendido:<span>*</span>
                         </label>
-                        <input type="text" for="cargo" id="cargo" name="cargo" required>
+                        <input type="text" for="cargo" id="cargo" name="cargo" placeholder="Ex: Desenvolvedor de Software" required>
                     </fieldset>
                 </div>
 
@@ -97,7 +98,7 @@
                     <fieldset class="cep">
                         <label for="cep"> CEP:<span>*</span>
                         </label>
-                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="Ex: 00000-000"
                             onblur="pesquisacep(this.value);">
                     </fieldset>
 
@@ -140,13 +141,13 @@
                     <fieldset class="email">
                         <label for="email"> Email:<span>*</span>
                         </label>
-                        <input type="email" for="email" id="email" name="email" required>
+                        <input type="email" for="email" id="email" name="email" placeholder="Ex: exemplo@exemplo.com" required>
                     </fieldset>
 
                     <fieldset>
                         <label for="celular"> Celular:<span>*</span>
                         </label>
-                        <input type="phone" for="celular" id="celular" name="celular" required>
+                        <input type="phone" for="celular" id="celular" name="celular" placeholder="Ex: (00) 00000-0000" required>
                     </fieldset>
 
                 </div>
@@ -157,13 +158,13 @@
                     <fieldset>
                         <label for="tel-1"> Telefone Fixo 1:
                         </label>
-                        <input type="phone" for="tel-1" id="tel-1" name="tel1">
+                        <input type="phone" for="tel-1" id="tel-1" name="tel1" placeholder="Ex: 0000-0000">
 
                     </fieldset>
                     <fieldset>
                         <label for="tel-2"> Telefone Fixo 2:
                         </label>
-                        <input type="phone" for="tel-2" id="tel-2" name="tel2">
+                        <input type="phone" for="tel-2" id="tel-2" name="tel2" placeholder="Ex: 0000-0000">
                     </fieldset>
                     
                 </div>
@@ -181,7 +182,7 @@
                     <fieldset>
                         <label for="cpf"> CPF:<span>*</span>
                         </label>
-                        <input type="number" for="cpf" id="cpf" name="cpf" required>
+                        <input type="text" for="cpf" id="cpf" name="cpf" placeholder="Ex: 000.000.000-00" required >
                     </fieldset>
                 </div>
 
@@ -225,7 +226,9 @@
             </form>
         </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="./script.js"></script> 
+
 </body>
 
 </html>
