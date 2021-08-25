@@ -186,11 +186,11 @@ button {
     margin: 1.5rem auto;
     cursor: pointer;
 }
-
 span {
-    font-size: 18px;
+    font-size: 14px;
     color: red;
     display: inline-block;
+    font-weight: 400;
 }
 
 .check {

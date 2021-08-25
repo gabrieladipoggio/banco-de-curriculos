@@ -182,7 +182,8 @@
                     <fieldset>
                         <label for="cpf"> CPF:<span>*</span>
                         </label>
-                        <input type="text" for="cpf" id="cpf" name="cpf" placeholder="Ex: 000.000.000-00" required >
+                        <input type="text" for="cpf" id="cpf" name="cpf" maxlength="14" placeholder="Ex: 000.000.000-00" required onkeydown="javascript: fMasc(this, mCPF)" oninput="ValidaCPF()";>
+                        <span id="erro-cpf"></span>
                     </fieldset>
                 </div>
 
