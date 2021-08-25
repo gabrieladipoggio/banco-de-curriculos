@@ -5,5 +5,5 @@ Projeto de conclusão do programa de bolsas Start Tech, oferecido pela Gama Acad
 - [ ] Adicionar máscaras de CPF/CEP/Telefone
 - [ ] Criar tabela para o endereço
 - [ ] Documentação com o Swagger
-- [ ] Hospedar banco de dados
+- [ ] Hospedar banco de dados 
 - [ ] Deploy Heroku
