@@ -9,13 +9,14 @@
     "express-handlebars": "^5.3.3",
     "mongoose": "^6.0.0",
     "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
     "vanilla-masker": "^1.2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
