@@ -1,3 +1,23 @@
+document.forms['cv_form'].addEventListener('submit', (event) => {
+    event.preventDefault();
+    // TODO do something here to show user that form is being submitted
+    fetch(event.target.action, {
+        method: 'POST',
+        body: new URLSearchParams(new FormData(event.target)) // event.target is the form
+    }).then((resp) => {
+        console.log(resp)
+        if (resp.redirected) {
+            window.location.href = resp.url;
+        }
+        return resp.json();
+    }).then((body) => {
+        if (body.error == 1) {
+            alert("CPF duplicate")
+        } 
+    }).catch((error) => {
+        // TODO handle error
+    });
+});
 
 
 
