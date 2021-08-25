@@ -1,9 +1,9 @@
 document.forms['cv_form'].addEventListener('submit', (event) => {
     event.preventDefault();
-    // TODO do something here to show user that form is being submitted
+    // TODO mostrar que o formulário está sendo enviado
     fetch(event.target.action, {
         method: 'POST',
-        body: new URLSearchParams(new FormData(event.target)) // event.target is the form
+        body: new URLSearchParams(new FormData(event.target)) // event.target é o form
     }).then((resp) => {
         console.log(resp)
         if (resp.redirected) {
@@ -21,7 +21,7 @@ document.forms['cv_form'].addEventListener('submit', (event) => {
 
 
 
-// CEP Validation
+// Validação do CEP
 function limpa_formulário_cep() {
     //Limpa valores do formulário de cep.
     document.getElementById('rua').value = ("");
@@ -44,7 +44,7 @@ function meu_callback(conteudo) {
         //CEP não Encontrado.
         limpa_formulário_cep();
 
-        //Mudar para html
+        //TODO Mudar para html
         alert("CEP não encontrado.");
     }
 }

@@ -8,6 +8,7 @@
     font-weight: 700;
 }
 
+
 :root {
     --main: #33627C;
     --text: #525252;
@@ -42,6 +43,14 @@ ul li a {
     font-weight: 500;
 }
 
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 a:hover{
+    text-decoration: none;
+}
 
 .container {
     height: 90%;
@@ -57,25 +66,26 @@ img {
     height: auto;
 }
 
-.main-text, form{
+.main-text,
+form {
     display: flex;
     flex-direction: column;
     width: 500px;
-    justify-content:center;
+    justify-content: center;
 }
 
 .title {
     color: var(--main);
     font-size: 32px;
-   
+
 }
 
- .title-decoration{
+.title-decoration {
     width: 70px;
     height: 6px;
     background-color: var(--text);
     margin: 15px 0 1em 0;
-} 
+}
 
 .intro-texto {
     color: var(--text);
@@ -97,10 +107,13 @@ form {
     width: 65%;
 }
 
-input, select, textarea, option{
+input,
+select,
+textarea,
+option {
     padding: 5px;
     border: none;
-    border-bottom: 1px solid;   
+    border-bottom: 1px solid;
     font-size: 16px;
     font-weight: 400;
 }
@@ -114,18 +127,20 @@ input, select, textarea, option{
 }
 
 fieldset {
-    border:none;
+    border: none;
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 0 20px;
 }
 
-.cep input{
-    width: 220px;;
+.cep input {
+    width: 220px;
+    ;
 }
 
- .estado, .numero input{
+.estado,
+.numero input {
     width: 150px;
 }
 
@@ -136,7 +151,7 @@ fieldset {
 form h2 {
     color: var(--main);
     font-weight: 500;
-    margin:20px;
+    margin: 20px;
 }
 
 .carro {
@@ -144,7 +159,8 @@ form h2 {
     width: 200px;
 }
 
-.carro label, .habilitacao label {
+.carro label,
+.habilitacao label {
     font-weight: 400;
     padding-right: 20px;
 }
@@ -176,3 +192,45 @@ span {
     color: red;
     display: inline-block;
 }
+
+.check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+}
+
+span.material-icons {
+    color: var(--main);
+    font-size: 150px;
+}
+
+.check h4{
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 32px;
+    color: #171717;
+}
+
+.check p {
+    font-weight: 300;
+    font-size: 22px;
+    color: #171717;
+    margin-bottom: 5px;
+}
+
+.check button {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.check a {
+    text-decoration: none;
+    color: #171717;
+    margin-top: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
