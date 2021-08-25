@@ -1,68 +1,67 @@
 const db = require('./db');
 
-const User = db.sequelize.define('cadastros',{
+
+const UserSchema = db.mongoose.Schema({
     nome: {
-        type: db.Sequelize.STRING
+        type: String
     },
     cargo: {
-        type: db.Sequelize.STRING
+        type: String
     },
-    dataNasc: {
-        type: db.Sequelize.DATE
+    dataNasc:  {
+        type: String
     },
-    estadoCivil: {
-        type: db.Sequelize.STRING
+    estadoCivil:  {
+        type: String
     },
-    sexo: {
-        type: db.Sequelize.STRING
+    sexo:  {
+        type: String
     },
-    cep: {
-        type: db.Sequelize.STRING
+    cep:  {
+        type: String
     },
-    rua: {
-        type: db.Sequelize.STRING
+    rua:  {
+        type: String
     },
-    numero: {
-        type: db.Sequelize.STRING
+    numero:  {
+        type: String
     },
     bairro: {
-        type: db.Sequelize.STRING
+        type: String
     },
-    cidade: {
-        type: db.Sequelize.STRING
+    cidade:  {
+        type: String
     },
-    estado: {
-        type: db.Sequelize.STRING
+    estado:  {
+        type: String
     },
-    email: {
-        type: db.Sequelize.STRING
+    email:  {
+        type: String,
     },
     celular: {
-        type: db.Sequelize.STRING
+        type: String
     },
     tel1: {
-        type: db.Sequelize.STRING
+        type: String
     },
-    tel2: {
-        type: db.Sequelize.STRING
+    tel2:  {
+        type: String
     },
     identidade: {
-        type: db.Sequelize.STRING
+        type: String
     },
-    cpf: {
-        type: db.Sequelize.STRING,
-        unique: true
+    cpf:  {
+        type: String,
+        require: true
     },
     habilitacao: {
-        type: db.Sequelize.STRING
+        type: String
     },
-    carro: {
-        type: db.Sequelize.STRING
-     }
-    
-})
+    carro:  {
+        type: String
+    }
+}) 
 
-// Só executa na hora de criar o model
-//User.sync({force: true})
+const User = db.mongoose.model('usuarios', UserSchema)
 
 module.exports = User;

@@ -19,20 +19,16 @@ app.use(express.json())
 
 // Rotas
 app.post('/add', async function (req, res) {
-    cpf_matches = await User.findAll({
-        where: {
-            cpf: {
-                [Op.eq]: req.body.cpf
-            }
-        }
+    cpf_matches = await User.findOne({
+       cpf: req.body.cpf
     })
+    console.log(cpf_matches);
 
-    if (cpf_matches.length > 0) {
+    if (cpf_matches) {
         res.json({
             error: 1
         })
     } else {
-        // req.body.nome
         User.create({
             nome: req.body.nome,
             cargo: req.body.cargo,
@@ -60,7 +56,7 @@ app.post('/add', async function (req, res) {
         })
     }
 })
-
-app.listen(8081, function () {
+const PORT = process.env.PORT || 8081
+app.listen(PORT, () => {
     console.log(`Servidor rodando na url http://localhost:8081`)
 });
