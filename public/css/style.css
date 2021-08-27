@@ -256,8 +256,11 @@ a:hover {
 @media (max-width: 768px){
     header {
         justify-content: center;
-        gap: 95%;
-        margin-bottom:30px;
+        margin-bottom:40px;
+    }
+
+    .logo {
+        margin-right: 4em;
     }
     
     ul {
@@ -266,6 +269,7 @@ a:hover {
 
     .burger-menu {
         display: block;
+        margin-left: 4em;
     }
 
     img {
