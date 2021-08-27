@@ -27,6 +27,14 @@ header {
     justify-content: space-between;
     padding: 0 150px;
     align-items: center;
+
+}
+
+.burger-menu {
+    filter: brightness(0) invert(1);
+    width: 35px;
+    height: 35px;
+    display: none;
 }
 
 ul {
@@ -34,6 +42,8 @@ ul {
     flex-direction: row;
     gap: 90px;
     list-style-type: none;
+    flex-wrap: wrap;
+
 }
 
 ul li a {
@@ -59,6 +69,8 @@ h1 a:hover{
     gap: 80px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
 }
 
 img {
@@ -72,6 +84,7 @@ form {
     flex-direction: column;
     width: 500px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .title {
@@ -124,6 +137,7 @@ option {
     justify-content: space-between;
     width: 100%;
     margin: 20px 0 20px 0;
+    
 }
 
 fieldset {
@@ -132,6 +146,8 @@ fieldset {
     flex-direction: column;
     width: 100%;
     margin: 0 20px;
+    flex-wrap: wrap;
+
 }
 
 .cep input {
@@ -157,6 +173,7 @@ form h2 {
 .carro {
     flex-direction: row;
     width: 200px;
+    
 }
 
 .carro label,
@@ -232,5 +249,83 @@ span.material-icons {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+
+@media (max-width: 768px){
+    header {
+        justify-content: space-around;
+        gap: 80%;
+    }
+    
+    ul {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    img {
+        display: none;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .container {
+        height: 100%;
+        margin: 0 20px;
+        gap: 4em;
+    }
+
+    .title-decoration {
+        width: 50px;
+    }
+
+    .intro-texto {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+    .formulario h3 {
+        margin: 0 15px;
+    }
+    
+    form {
+        width: 85%;
+        margin-top: 25px;
+    }
+
+        input,
+    select,
+    textarea,
+    option {
+        margin-bottom: 30px;
+    }
+
+    .form-row{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    fieldset, form h2, .habilitacao {
+        margin: 0;
+    }
+
+    .cep input, .rua input, .carro, .estado,
+    .numero input  {
+        width: 100%;
+    }
+
+    form h2, .habilitacao  {
+        margin-bottom: 25px;
+    }
+
+    button {
+        width: 100%;
+    }
+
 }
 
