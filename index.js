@@ -1,10 +1,6 @@
 const express = require('express');
 const app = express();
 const User = require('./models/User');
-const {
-    Op
-} = require("sequelize");
-
 
 // Config
 app.use(express.static(__dirname + '/public'));
@@ -15,6 +11,10 @@ app.use(express.urlencoded({
 }))
 app.use(express.json())
 
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocs = require('./swagger.json');
+
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 
 // Rotas
@@ -25,7 +25,7 @@ app.post('/add', async function (req, res) {
     console.log(cpf_matches);
 
     if (cpf_matches) {
-        res.json({
+        res.status(400).json({
             error: 1
         })
     } else {

@@ -1,0 +1,147 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API de um banco de currículos com serviço de cadastro de usuários.",
+    "version": "1.0.0",
+    "title": "Banco de currículos",
+    "contact": {
+      "email": "gabrieladipoggio@hotmail.com"
+    }
+  },
+  "host": "banco-de-curriculos.herokuapp.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "banco-de-curriculos",
+      "description": "Cadastro de currículos"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/add": {
+      "post": {
+        "tags": [
+          "banco-de-curriculos"
+        ],
+        "summary": "Cadastro do usuário",
+        "description": "Recebe o cadastro do candidato por meio das informações registradas no formulário",
+        "operationId": "cadastroCandidato",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Informações do candidato",
+            "required": true,
+            "schema": {
+              "properties": {
+                "nome": {
+                  "type": "string",
+                  "example": "Gabriela"
+                },
+                "cargo": {
+                  "type": "string",
+                  "example": "Software Developer"
+                },
+                "dataNasc": {
+                  "type": "string",
+                  "example": "18/09/1997"
+
+                },
+                "estadoCivil": {
+                  "type": "string",
+                  "example": "Solteiro"
+                },
+                "sexo": {
+                  "type": "string",
+                  "example": "Feminino"
+                },
+                "cep": {
+                  "type": "string",
+                  "example": "08527-080"
+                },
+                "rua": {
+                  "type": "string",
+                  "example": "Rua Pato Donald"
+                },
+                "numero": {
+                  "type": "string",
+                  "example": "123"
+                },
+                "bairro": {
+                  "type": "string",
+                  "example": "Parque Dourado"
+                },
+                "cidade": {
+                  "type": "string",
+                  "example": "Ferraz de Vasconcelos"
+                },
+                "estado": {
+                  "type": "string",
+                  "example": "SP"
+                },
+                "email": {
+                  "type": "string",
+                  "example": "patodonald@disney.com.br"
+                },
+                "celular": {
+                  "type": "string",
+                  "example":"99999-0909"
+                },
+                "tel1": {
+                  "type": "string",
+                  "example": ""
+                },
+                "tel2": {
+                  "type": "string",
+                  "example": "3333-3332"
+                },
+                "identidade": {
+                  "type": "string",
+                  "example": "00000001"
+                },
+                "cpf": {
+                  "type": "string",
+                  "example": "667.719.250-48"
+                },
+                "habilitacao": {
+                  "type": "string",
+                  "example": "catA"
+                },
+                "carro": {
+                  "type": "string",
+                  "example": "Sim"
+                }
+              },
+              "required": [
+                "cpf"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "301": {
+            "description": "Cadastro efetuado, redireciona para a página de conclusão."
+          },
+          "400": {
+            "description": "Formulário inválido (e.g. CPF já cadastrado)"
+          },
+          "500": {
+            "description": "Erro na submissão para o banco de dados."
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Veja o projeto completo no GitHub",
+    "url": "https://github.com/gabrieladipoggio/banco-de-curriculos"
+  }
+}

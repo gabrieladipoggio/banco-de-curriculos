@@ -11,6 +11,7 @@
     "mysql2": "^2.3.0",
     "nodemon": "^2.0.12",
     "sequelize": "^6.6.5",
+    "swagger-ui-express": "^4.1.6",
     "vanilla-masker": "^1.2.0"
   },
   "devDependencies": {},
