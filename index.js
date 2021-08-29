@@ -58,7 +58,7 @@ app.post('/add', async function (req, res) {
 })
 
 app.get('/find/:cpf', async function (req, res){
-    var find_cpf = await User.findOne({cpf: req.params.cpf})
+    var find_cpf = await User.findOne({cpf: req.params.cpf}).exec()
     if(find_cpf){
         res.status(200).json(find_cpf);
     } else {
