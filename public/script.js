@@ -63,6 +63,13 @@ cpf=cpf.replace(/(\d{3})(\d{1,2})$/,"$1-$2")
 return cpf
 }
 
+function mCEP(cep){
+    cep=cep.replace(/\D/g,"")
+    cep=cep.replace(/^(\d{2})(\d)/,"$1.$2")
+    cep=cep.replace(/\.(\d{3})(\d)/,".$1-$2")
+    return cep
+}
+
 
 
 // Validação do CEP

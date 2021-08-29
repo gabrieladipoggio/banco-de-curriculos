@@ -50,7 +50,7 @@
                     <fieldset>
                         <label for="name">Nome Completo:<span>*</span>
                         </label>
-                        <input type="text" for="name" id="name" name="nome" required>
+                        <input type="text" for="name" id="name" name="nome" placeholder="Ex: João da Silva" required>
                     </fieldset>
 
                     <fieldset>
@@ -99,8 +99,9 @@
                     <fieldset class="cep">
                         <label for="cep"> CEP:<span>*</span>
                         </label>
-                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9" placeholder="Ex: 00000-000"
-                            onblur="pesquisacep(this.value);">
+                        <input name="cep" type="text" id="cep" value="" size="10" maxlength="10" placeholder="Ex: 00000-000"
+                        onkeydown="javascript: fMasc(this, mCEP)"    
+                        onblur="pesquisacep(this.value);">
                     </fieldset>
 
                     <fieldset class="rua">
@@ -148,7 +149,7 @@
                     <fieldset>
                         <label for="celular"> Celular:<span>*</span>
                         </label>
-                        <input type="phone" for="celular" id="celular" name="celular" placeholder="Ex: (00) 00000-0000" required>
+                        <input type="phone" for="celular" id="celular" name="celular" maxlength="15" placeholder="Ex: (00) 00000-0000" required>
                     </fieldset>
 
                 </div>
@@ -159,13 +160,13 @@
                     <fieldset>
                         <label for="tel-1"> Telefone Fixo 1:
                         </label>
-                        <input type="phone" for="tel-1" id="tel-1" name="tel1" placeholder="Ex: 0000-0000">
+                        <input type="phone" for="tel-1" id="tel-1" name="tel1" maxlength="15" placeholder="Ex: (00) 0000-0000">
 
                     </fieldset>
                     <fieldset>
                         <label for="tel-2"> Telefone Fixo 2:
                         </label>
-                        <input type="phone" for="tel-2" id="tel-2" name="tel2" placeholder="Ex: 0000-0000">
+                        <input type="phone" for="tel-2" id="tel-2" name="tel2" maxlength="15" placeholder="Ex: (00) 0000-0000">
                     </fieldset>
                     
                 </div>
@@ -197,19 +198,19 @@
                             <label for="nao_habilitado">Não possui</label>
 
                             <input type="checkbox" id="catA" name="habilitacao">
-                            <label for="nao_habilitado">Categoria A</label>
+                            <label for="catA">Categoria A</label>
 
                             <input type="checkbox" id="catB" name="habilitacao">
-                            <label for="nao_habilitado">Categoria B</label>
+                            <label for="catB">Categoria B</label>
 
                             <input type="checkbox" id="catC" name="habilitacao">
-                            <label for="nao_habilitado">Categoria C</label>
+                            <label for="catC">Categoria C</label>
 
                             <input type="checkbox" id="catD" name="habilitacao">
-                            <label for="nao_habilitado">Categoria D</label>
+                            <label for="catD">Categoria D</label>
 
                             <input type="checkbox" id="catE" name="habilitacao">
-                            <label for="nao_habilitado">Categoria E</label>
+                            <label for="catE">Categoria E</label>
 
                         </div>
                     </fieldset>
@@ -228,7 +229,6 @@
             </form>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="./script.js"></script> 
 
 </body>
