@@ -52,7 +52,7 @@ Para usar banco de currículos, siga estas etapas:
 * Mude o arquivo `db.js` para a url do banco de dados (`localhost:27017` caso o MongoDB esteja rodando localmente)
 
 ```
-`nodemon index.js`
+nodemon index.js
 ```
 
 

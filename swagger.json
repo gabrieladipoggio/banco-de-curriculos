@@ -53,7 +53,6 @@
                 "dataNasc": {
                   "type": "string",
                   "example": "18/09/1997"
-
                 },
                 "estadoCivil": {
                   "type": "string",
@@ -93,7 +92,7 @@
                 },
                 "celular": {
                   "type": "string",
-                  "example":"99999-0909"
+                  "example": "99999-0909"
                 },
                 "tel1": {
                   "type": "string",
@@ -135,6 +134,36 @@
           },
           "500": {
             "description": "Erro na submissão para o banco de dados."
+          }
+        }
+      }
+    },
+    "/find/{cpf}": {
+      "get": {
+        "tags": [
+          "banco-de-curriculos"
+        ],
+        "summary": "Busca usuário pelo CPF",
+        "description": "Busca o cadastro do usuário no banco de dados, informando o CPF",
+        "operationId": "buscaCandidato",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "cpf",
+            "description": "CPF do candidato",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Candidato encontrado, retorna dados do cadastro"
+          },
+          "500": {
+            "description": "Candidato não encontrado."
           }
         }
       }

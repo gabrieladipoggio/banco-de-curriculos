@@ -56,6 +56,18 @@ app.post('/add', async function (req, res) {
         })
     }
 })
+
+app.get('/find/:cpf', async function (req, res){
+    var find_cpf = await User.findOne({cpf: req.params.cpf})
+    if(find_cpf){
+        res.status(200).json(find_cpf);
+    } else {
+        res.status(500)
+    }
+})
+
+
+
 const PORT = process.env.PORT || 8081
 app.listen(PORT, () => {
     console.log(`Servidor rodando na url http://localhost:8081`)
