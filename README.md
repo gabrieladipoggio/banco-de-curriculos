@@ -1,8 +1,11 @@
 # banco de currículos
 Projeto de conclusão do programa de bolsas Start Tech, oferecido pela Gama Academy em parceria com a Ambev. 
 
+A proposta do desafio era desenvolver uma página de formulário para receber o cadastro de profissionais em busca de uma oportunidades de emprego e armazenar as informações num banco de dados. O projeto conta ainda com outras funcionalidades, como a integração com uma API de CEP para preencher o campo de endereço e a validação de CPF para identificar se o candidato já se cadastrou anteriormente.
+
+
  <h3 align="center">
-<a href="https://banco-de-curriculos.herokuapp.com/">[Clique aqui para ver o resultado do projeto]<a>
+<a href="https://banco-de-curriculos.herokuapp.com/">[Clique aqui para ver o resultado]<a>
 </h3>
 
 <h2 align="left">Screenshot</h2>
