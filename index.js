@@ -52,17 +52,19 @@ app.post('/add', async function (req, res) {
         }).then(() => {
             res.redirect(301, "/submitted.html")
         }).catch((erro) => {
-            res.status(500)
+            res.status(500).send("Ocorreu um erro")
         })
     }
 })
 
 app.get('/find/:cpf', async function (req, res){
     var find_cpf = await User.findOne({cpf: req.params.cpf}).exec()
-    if(find_cpf){
+
+    if(find_cpf !== null){
         res.status(200).json(find_cpf);
-    } else {
-        res.status(500)
+    } else{
+        res.status(500).send("CPF não encontrado")
+
     }
 })
 
