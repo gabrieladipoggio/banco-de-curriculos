@@ -251,7 +251,49 @@ a:hover {
     text-decoration: underline;
 }
 
+main.sobre {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 3.5rem auto;
+}
 
+
+.ilustra-img{
+    width:550px;
+    height:auto;
+}
+
+.texto-sobre{
+    margin: 0 60px;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+.texto-sobre a {
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+.p2{
+    font-weight: 400;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+.icons {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon {
+    width:60px;
+}
 
 @media (max-width: 768px){
     header {
